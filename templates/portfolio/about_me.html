@@ -1,0 +1,64 @@
+{% extends 'shared/_layout.html' %}
+{% load render_partial %}
+
+
+{% block title %}
+    درباره ی من
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-sm-6">
+        <div class="row mx-sm-5">
+            <div class="col-lg-4 mt-5">
+                <div class="card text-center bg-light" style="position: relative; padding-top: 170px; ">
+
+                    <img src="/static/assets/images/profile_insta.jpg" class="img-fluid p-2 rounded-circle" alt="Profile Image" style="height: 240px; width: 240px; position: absolute; top: -55px; left: 50%; transform: translateX(-50%);">
+                    <div class="card-body">
+                        <h5 class="card-title">پارسا معراجی</h5>
+                        <p class="card-text">تدوینگر و موشن گرافیست</p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-center">
+                        <a href="#" class="mx-2">
+                            <i class="fa-brands fa-instagram" style="font-size: 1.6rem"></i>
+                        </a>
+                        <a href="#" class="mx-2">
+                            <i class="fa-brands fa-telegram" style="font-size: 1.6rem"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 mt-5">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <h2 class="card-title" style="color: #780000">درباره ی  من</h2>
+                        <p class="card-text" style="font-size: 1.2rem; min-height: 230px">{{ site_settings.about_me }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container mt-5">
+        <div class="row mx-md-5">
+            <div class="d-md-flex d-none divider my-4">
+            <h5 class="mx-5 mb-3">افتخار همکاری</h5>
+        </div>
+        <div class="d-md-none d-flex flex-column align-items-center divider-mobile my-3">
+            <h5 class="mx-5 mb-3">افتخار همکاری</h5>
+            <div class="line"></div>
+        </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        {% for work in work_img %}
+                              <div class="swiper-slide">
+                                <img src="{{ work.image.url }}"/>
+                              </div>
+                        {% endfor %}
+                    </div>
+                </div>
+          </div>
+        </div>
+    </div>
+{% endblock %}

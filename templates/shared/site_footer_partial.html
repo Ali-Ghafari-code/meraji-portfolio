@@ -1,0 +1,35 @@
+<footer class="text-light py-4 mt-5" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5 class="bg-custom" style="color: #FDF0D5 !important">درباره‌ی من</h5>
+                <ul class="list-unstyled">
+                    <li class="text-light text-decoration-none">{{ site_settings.about_me_footer }}</li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 col-6 mb-3">
+                <h5 class="bg-custom" style="color: #FDF0D5 !important">دسترسی سریع</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{% url 'home_page' %}" class="text-light text-decoration-none">صفحه اصلی</a></li>
+                    <li><a href="{% url 'home_page' %}#reels" class="text-light text-decoration-none">نمونه های ریلز</a></li>
+                    <li><a href="{% url 'about_me' %}" class="text-light text-decoration-none">درباره ما</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 col-6 mb-3">
+                <h5 class="bg-custom" style="color: #FDF0D5 !important">ارتباط با ما</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{{ site_settings.instagram_link }}" class="text-light text-decoration-none"><i class="fa-brands fa-instagram mx-2" style="color: #FDF0D5 !important;"></i>اینستاگرام</a></li>
+                    <li><a href="{{ site_settings.telegram_link }}" class="text-light text-decoration-none"><i class="fa-brands fa-telegram mx-2" style="color: #FDF0D5 !important;"></i>تلگرام</a></li>
+                    <li><a href="{{ site_settings.email }}" class="text-light text-decoration-none"><i class="fa fa-mail-forward mx-2" style="color: #FDF0D5 !important;"></i>ایمیل</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="container"></div>
+<div class="footer-bottom bg-primary text-white py-sm-2 d-md-flex justify-content-between align-items-center policy text-center">
+    <p class="mb-0">تمامی حقوق این سایت متعلق به <b>پارسا معراجی</b> می‌باشد</p>
+    <p class="mb-0 my-sm-0 mt-4"><a href="#" class="text-white text-decoration-none ">ارتباط با طراح و توسعه‌دهنده ‌ی سایت</a></p>
+</div>

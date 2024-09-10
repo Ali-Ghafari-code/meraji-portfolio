@@ -1,0 +1,105 @@
+{% extends 'shared/_layout.html' %}
+{% load render_partial %}
+
+
+{% block title %}
+    صفحه اصلی
+{% endblock %}
+
+{% block main %}
+<main class="container-md container-fluid mt-sm-6">
+    <div class="row mx-lg-5">
+        <a href="#about"><img src="/static/assets/images/IMG_20240902_183250_106.JPG" alt="" class="img-fluid d-sm-block d-none banner">
+        <img src="/static/assets/images/mobile%20banner.jpg" alt="" class="img-fluid d-md-none d-block sm-banner"></a>
+    
+
+
+        <div class="d-md-flex d-none divider mt-5"  id="reels">
+            <h5 class="mx-5 mb-3">نمونه  تدوین ریلز</h5>
+        </div>
+        <div class="d-md-none d-flex flex-column align-items-center divider-mobile mt-5" id="reels2">
+            <h5 class="mx-5 mb-3">تدوین ریلز</h5>
+            <div class="line"></div>
+        </div>
+
+
+        <div class="container-fluid mt-3">
+            <div class="row">
+                {% for reel in reels %}
+                <div class="col-md-4 my-2">
+                    <div class="container-video">
+                        <div class="card custom-card mx-md-0 mx-3">
+                            <video controls>
+                                <source src="{{ reel.video.url }}" type="video/mp4" size="1080" alt="{{ reel.title }}">
+                            </video>
+                            <div class="custom-card card-body">
+                                <h5 class="custom-card card-title text-center text-dark">{{ reel.title }}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+
+
+        <div class="d-md-flex d-none divider mt-5" id="camera">
+            <h5 class="mx-5 mb-3">نمونه  قاب فیلمبرداری</h5>
+        </div>
+        <div class="d-md-none d-flex flex-column align-items-center divider-mobile mt-5" id="camera2">
+            <h5 class="mx-5 mb-3">قاب فیلمبرداری</h5>
+            <div class="line"></div>
+        </div>
+
+
+        <div class="container-fluid mt-3">
+            <div class="row">
+                {% for film_frame in film_frames %}
+                <div class="col-lg-4 col-md-6 mx-sm-0 d-flex justify-content-center shape my-2">
+                    <img src="{{ film_frame.image.url }}" alt="{{ film_frame.image }}" class="img-fluid rounded custom-img">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="d-md-flex d-none divider mt-5" id="cover">
+            <h5 class="mx-5 mb-3">نمونه طراحی کاور</h5>
+        </div>
+        <div class="d-md-none d-flex flex-column align-items-center divider-mobile mt-5" id="cover2">
+            <h5 class="mx-5 mb-3">طراحی کاور</h5>
+            <div class="line"></div>
+        </div>
+
+        <div class="container-fluid mt-3">
+            <div class="row">
+                {% for before_after_image in before_after_images %}
+
+                <div class="col-lg-4 col-sm-6 my-3 d-flex justify-content-center">
+                    <div class="before-after rounded">
+                        <span class="before-label">بعد</span>
+                        <span class="after-label">قبل</span>
+                        <img src="{{ before_after_image.before_image.url }}" alt="Before Image" class="before" onmousedown="return false;">
+                        <img src="{{ before_after_image.after_image.url }}" alt="After Image" class="after" onmousedown="return false;">
+                        <div class="slider">
+                            <div class="slider-button"></div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    </div>
+</main>
+
+{% endblock %}

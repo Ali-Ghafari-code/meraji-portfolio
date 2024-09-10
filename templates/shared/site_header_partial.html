@@ -1,0 +1,71 @@
+<header class="container-md container-fluid d-none d-sm-block mt-2 fixed-top">
+    <div class="row mx-lg-5">
+        <nav class="navbar navbar-expand-lg navbar-light py-3">
+            <div class="container-fluid header">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1"
+                        aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav1">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'home_page' %}"><i
+                                    class="fa-solid fa-house mx-1"></i>صفحه ی اصلی</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#reels"><i class="fa-brands fa-instagram mx-1"></i>نمونه
+                                کار تدوین ریلز</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#camera"><i class="fas fa-camera mx-1"></i>نمونه کار قاب
+                                فیلمبرداری</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#cover"><i class="fas fa-image mx-1"></i>نمونه کار طراحی
+                                کاور</a>
+                        </li>
+                        <li class="nav-item d-lg-none d-xl-block">
+                            <a class="nav-link active" href="{% url 'about_me' %}"><i class="fas fa-user-circle mx-1"></i>درباره ی من</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<header class="container-md container-fluid d-block d-sm-none mt-2">
+    <div class="row mx-lg-5">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light py-3">
+            <div class="container-fluid header">
+                <div class="navbar-toggler" onclick="toggleSidebar()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" onclick="toggleSidebar()">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="navbar-nav mt-2">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'home_page' %}"><i class="fa-solid fa-house"></i>صفحه ی اصلی</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#reels2"><i class="fa-brands fa-instagram"></i>نمونه کار تدوین ریلز</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#camera2"><i class="fas fa-camera"></i>نمونه کار قاب فیلمبرداری</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#cover2"><i class="fas fa-image"></i>نمونه کار طراحی کاور</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url 'about_me' %}"><i class="fas fa-user-circle"></i>درباره ی من</a>
+            </li>
+        </ul>
+    </div>
+</header>
